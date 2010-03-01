@@ -1,0 +1,9 @@
+Overview of the Android part of the project
+
+= Details =
+
+ * Camera preview is started
+ * Touching the surface takes a photo and sends to the server as a POST
+ * Plays a "waiting" sound to notify the user that processing is in progress
+ * Reads the response from the server
+ * Plays audio corresponding to the result of the processing.
