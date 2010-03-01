@@ -1,0 +1,15 @@
+package ss12.mcreader;
+
+public class Constants {
+	public static final int WAITING_SOUND = -3;
+	public static final int SHUTTER_SOUND = -2;
+	public static final int ONE_DOLLAR_SOUND = 1;
+	public static final int FIVE_DOLLAR_SOUND = 5;
+	public static final int TEN_DOLLAR_SOUND = 10;
+	public static final int TWENTY_DOLLAR_SOUND = 20;
+	public static final int FIFTY_DOLLAR_SOUND = 50;
+	public static final int ONE_HUNDRED_DOLLAR_SOUND = 100;
+	public static final int CONNECTION_FAILED = -4;
+	public static final int PICTURE_WIDTH = 512;
+	public static final int PICTURE_HEIGHT = 384;
+}
