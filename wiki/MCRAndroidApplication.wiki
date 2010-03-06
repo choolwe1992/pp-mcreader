@@ -2,13 +2,13 @@ Overview of the Android application part of the project
 
 = Design Goals =
 Create an accessible, easy-to-use interface with clear indicators for the state of the application.
-* Accessibility:
-  * Use voice and sound to indicate errors
-  * Use sound to indicate processing time so the user knows that the application is doing something
-  * Use voice to communicate the result of the image processing
-* Ease of use:
-  * One button interface: point and touch the screen
-  * On error, fail quickly so the user can try again as soon as possible
+ * Accessibility:
+   * Use voice and sound to indicate errors
+   * Use sound to indicate processing time so the user knows that the application is doing something
+   * Use voice to communicate the result of the image processing
+ * Ease of use:
+   * One button interface: point and touch the screen
+   * On error, fail quickly so the user can try again as soon as possible
 
 = Class Structure =
 This section is for people who are interested in developing an Android application.
