@@ -18,7 +18,7 @@ To run the application follow the instructions on the Android
 Developers website.  The files for the app can be found in
 MCReader.
 
-== Alternative Solution ==
+== Alternative Solution (In progress) ==
 
 Assume: We have a raw imagine name image.jpg
 
@@ -27,7 +27,7 @@ Assume: We have a raw imagine name image.jpg
  # Classifier will extract the banknote from the image and input into an object identifier.
  # The object identifier will output what bill is.
 
-== Somewhat different alternative solution ==
+== Somewhat different alternative solution (In progress) ==
 
 Derived from above solution.
 
