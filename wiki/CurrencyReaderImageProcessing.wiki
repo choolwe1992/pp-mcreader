@@ -1,4 +1,3 @@
-
 = Mobile Currency Reader = 
 
 == Compiling & Installing currencyreader.cpp ==
@@ -18,3 +17,24 @@ This should compile the program and give you an executable called "cr".
 To run the application follow the instructions on the Android
 Developers website.  The files for the app can be found in
 MCReader.
+
+== Alternative Solution ==
+
+Assume: We have a raw imagine name image.jpg
+
+1/ We input the image file into an already trained classifier.
+   a. Training classifier could takes more than a day due to size of training data.
+2/ Classifier will extract the banknote from the image and input into an object identifier.
+3/ The object identifier will output what bill is.
+
+== Somewhat different alternative solution ==
+
+Derived from above solution.
+
+1/ We will train the five different classifiers. So we have about different classifiers for each banknote $1, $5, $10, $20, $100.
+2/ Classifiers will tell you if it found object in the image.
+3/ If Sum of classifier's output doesn't add up to one bill, then it is ERROR.
+
+
+
+
