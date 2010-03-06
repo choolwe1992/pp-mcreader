@@ -12,6 +12,7 @@ Based on our admittedly limited understanding of Android development:
 
 == Relevant Links ==
 [http://developer.android.com/index.html Android Developers]
+[http://marakana.com/forums/android/android_examples/39.html Android Examples - Camera]
 
 = Details =
  * Camera preview is started
