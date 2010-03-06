@@ -1,6 +1,7 @@
 Overview of the Android application part of the project
 
 = Class Structure =
+This section is for people who are interested in developing an Android application.
 Based on our admittedly limited understanding of Android development:
  * The activity is the main function that is called when the application starts
  * The preview is the camera preview box
@@ -8,6 +9,9 @@ Based on our admittedly limited understanding of Android development:
    * A function that takes the picture is called when the preview surface is touched
  * The handler is created solely to get messages from the worker thread, this allows us to have a separate thread for work and display
  * The worker thread sends the image data to our server
+
+== Relevant Links ==
+[http://developer.android.com/index.html Android Developers]
 
 = Details =
  * Camera preview is started
