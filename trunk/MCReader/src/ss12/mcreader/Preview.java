@@ -1,18 +1,20 @@
 package ss12.mcreader;
 
+import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.pm.ActivityInfo;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.hardware.Camera;
+import android.hardware.Camera.Size;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 class Preview extends SurfaceView implements SurfaceHolder.Callback {
 	private static final String TAG = "Preview";
-
+	public ProgressDialog dialog;
+	
     SurfaceHolder mHolder;
     public Camera camera;
     
@@ -26,17 +28,28 @@ class Preview extends SurfaceView implements SurfaceHolder.Callback {
         mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
     }
     
+    public void progressDialog () {
+    	camera.stopPreview();
+    	dialog = ProgressDialog.show(this.getContext(), "Processing", "Please wait for image to process...", true);
+    }
+    
     public void refresh() {
     	if (camera != null) {
     		Camera.Parameters parameters = camera.getParameters();
-            //getSupportedPreviewSizes
-            Camera.Size sz = parameters.getPreviewSize();
-            parameters.setPreviewSize(sz.width, sz.height);
-            parameters.set("orientation", "portrait");
-
-            //parameters.setPreviewSize(w, h);
-            camera.setParameters(parameters);
-            camera.startPreview();
+    		if (parameters != null && parameters.getSupportedPreviewSizes() != null) {
+	            for (Size s : parameters.getSupportedPreviewSizes()) {
+	            	Log.d("PREVIEW Available Sizes", s.width + "x" + s.height);
+	            }
+	            Camera.Size sz = parameters.getPreviewSize();
+	            
+	            parameters.setPreviewSize(Constants.PREVIEW_WIDTH, Constants.PREVIEW_HEIGHT);
+	            //parameters.set("orientation", "portrait");
+	            dialog.hide();
+	            dialog = null;
+	            //parameters.setPreviewSize(w, h);
+	            camera.setParameters(parameters);
+	            camera.startPreview();
+    		}
     	}
     }
 
@@ -69,9 +82,19 @@ class Preview extends SurfaceView implements SurfaceHolder.Callback {
     	Log.d("PREVIEW", "Surface changed");
     	Camera.Parameters parameters = camera.getParameters();
         //getSupportedPreviewSizes
-        Camera.Size sz = parameters.getPreviewSize();
-        parameters.setPreviewSize(sz.width, sz.height);
-        parameters.set("orientation", "portrait");
+    	int width = 0;
+    	int height = 0;
+    	for (Size s : parameters.getSupportedPreviewSizes()) {
+			Log.d(TAG, "available size: " + String.valueOf(s.height) +","+ String.valueOf(s.width));
+			width = s.width;
+			height = s.height;
+			if ( width > Constants.PICTURE_WIDTH_THRESHOLD || height > Constants.PICTURE_HEIGHT_THRESHOLD) {
+				break;
+			}
+		}
+        parameters.setPreviewSize(Constants.PREVIEW_WIDTH, Constants.PREVIEW_HEIGHT);
+        //parameters.setPreviewSize(sz.width, sz.height);
+        //parameters.set("orientation", "portrait");
 
         //parameters.setPreviewSize(w, h);
         camera.setParameters(parameters);
