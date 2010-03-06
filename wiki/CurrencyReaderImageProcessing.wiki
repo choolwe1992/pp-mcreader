@@ -34,3 +34,8 @@ Derived from above solution.
  # We will train the five different classifiers. So we have about different classifiers for each banknote $1, $5, $10, $20, $100.
  # Classifiers will tell you if it found object in the image.
  # If Sum of classifier's output doesn't add up to one bill, then it is ERROR.
+
+== Correlation Approach ==
+
+Extract the bill and run normalized cross correlation with sample templates and return the denomination corresponding to the template that gave the maximum correlation.
+Source code added in the Downloads Section.
