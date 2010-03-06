@@ -11,7 +11,7 @@ Create an accessible, easy-to-use interface with clear indicators for the state 
    * On error, fail quickly so the user can try again as soon as possible
 
 = Class Structure =
-This section is for people who are interested in developing an Android application.
+This section is for people who are interested in making changes to our Android application.
 Based on our admittedly limited understanding of Android development:
  * The activity is the main function that is called when the application starts
  * The preview is the surface that contains the camera preview box
