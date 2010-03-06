@@ -1,13 +1,17 @@
-Overview of the Android part of the project
+Overview of the Android application part of the project
 
 = Class Structure =
- * The activity is the main 
-
+Based on our admittedly limited understanding of Android development:
+ * The activity is the main function that is called when the application starts
+ * The preview is the camera preview box
+   * It holds the camera as well as displays the camera preview
+   * A function that takes the picture is called when the preview surface is touched
+ * The handler is created solely to get messages from the worker thread, this allows us to have a separate thread for work and display
+ * The worker thread sends the image data to our server
 
 = Details =
-
  * Camera preview is started
- * Touching the surface takes a photo and sends to the server as a POST
+ * Touching the surface takes a photo and sends to the server as HTTP POST
  * Plays a "waiting" sound to notify the user that processing is in progress
  * Reads the response from the server
  * Plays audio corresponding to the result of the processing.
