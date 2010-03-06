@@ -1,12 +1,1 @@
-Summary of the image processing code. This should be run on the server
-
-
-= Details =
-
-This code is run from the PHP page that receives the photo.  It takes in the filename of the  photo as input and will return the value of the currency as output.
-
-To run: ./CurrencyReaderRevised filename
-
-= Libraries =
-
-Requires Tesseract and OpenCV
+[TO BE UPDATED]
