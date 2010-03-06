@@ -1,1 +1,20 @@
-Refer in Source, README file
+
+= Mobile Currency Reader = 
+
+== Compiling & Installing currencyreader.cpp ==
+
+To compile the currencyreader.cpp program, cd into vlfeat.
+You must first install vlfeat before you can compile currencyreader.cpp.  
+Find the package at http://www.vlfeat.org/.
+Download the latest version for your system and extract it to
+a folder called vl.  You should see files called sift.h and
+generic.h in the vl folder.
+Once that is done, you can return to your install directory, where
+currencyreader.cpp is located, and run `make`.
+This should compile the program and give you an executable called "cr".
+
+== Running the Android application ==
+
+To run the application follow the instructions on the Android
+Developers website.  The files for the app can be found in
+MCReader.
