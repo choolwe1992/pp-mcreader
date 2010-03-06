@@ -37,5 +37,5 @@ Derived from above solution.
 
 == Correlation Approach ==
 
-Extract the bill and run normalized cross correlation with sample templates and return the denomination corresponding to the template that gave the maximum correlation.
+Extract the bill and run normalized cross correlation with sample templates and return the denomination corresponding to the template that gave the maximum value.
 Source code added in the Downloads Section.
