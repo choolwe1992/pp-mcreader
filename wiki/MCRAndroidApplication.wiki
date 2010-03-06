@@ -1,5 +1,9 @@
 Overview of the Android part of the project
 
+= Class Structure =
+ * The activity is the main 
+
+
 = Details =
 
  * Camera preview is started
